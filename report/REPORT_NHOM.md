@@ -53,7 +53,7 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 | Tài liệu | Chiến lược (Strategy) | Số lượng Chunk | Độ dài trung bình | Giữ được ngữ cảnh không? |
 |-----------|----------|-------------|------------|-------------------|
 | | FixedSizeChunker (`fixed_size`) | | | |
-| | SentenceChunker (`by_sentences`) | | | |
+| Tổng hợp 3 tài liệu (`chunk_size=200`) | SentenceChunker (`by_sentences`) | 1.415 | 294,18 ký tự | Có — chunk kết thúc tại ranh giới câu, nên giữ được ý trọn vẹn tốt hơn cách cắt theo số ký tự. |
 | | RecursiveChunker (`recursive`) | | | |
 
 ### Chiến lược của từng thành viên
@@ -68,10 +68,10 @@ Chạy `ChunkingStrategyComparator().compare()` trên 2-3 tài liệu:
 # Dán mã nguồn (implementation) vào đây
 ```
 
-**Thành viên 2 — [Tên]**
-- **Loại chiến lược:**
-- **Mô tả & lý do chọn:**
-- **Code snippet (nếu custom):**
+**Thành viên 2 — Vũ Duy Điệp**
+- **Loại chiến lược:** SentenceChunker (`max_sentences_per_chunk=3`)
+- **Mô tả & lý do chọn:** Trên ba quy định, chiến lược này tạo 1.415 chunk với độ dài trung bình 294,18 ký tự. Chunk được ghép tối đa ba câu và không cắt giữa câu, vì vậy giữ ngữ cảnh tốt hơn FixedSizeChunker cắt theo ký tự và RecursiveChunker có chunk trung bình ngắn hơn (119,31 ký tự). Đánh đổi là một chunk vẫn có thể chứa nhiều ý nếu ba câu liền nhau không cùng một điều khoản; chất lượng truy xuất cần được xác nhận bằng benchmark chung.
+- **Code snippet (nếu custom):** `SentenceChunker(max_sentences_per_chunk=3)`
 
 **Thành viên 3 — [Tên]**
 - **Loại chiến lược:**

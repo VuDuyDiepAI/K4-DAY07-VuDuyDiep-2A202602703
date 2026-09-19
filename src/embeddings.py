@@ -83,5 +83,19 @@ class GeminiEmbedder:
         response = self.client.models.embed_content(model=self.model_name, contents=text)
         return [float(value) for value in response.embeddings[0].values]
 
+    def embed_many(self, texts: list[str], batch_size: int = 50) -> list[list[float]]:
+        """Embed texts in API batches to stay within request-rate limits."""
+        vectors: list[list[float]] = []
+        for start in range(0, len(texts), batch_size):
+            response = self.client.models.embed_content(
+                model=self.model_name,
+                contents=texts[start : start + batch_size],
+            )
+            vectors.extend(
+                [float(value) for value in embedding.values]
+                for embedding in response.embeddings
+            )
+        return vectors
+
 
 _mock_embed = MockEmbedder()

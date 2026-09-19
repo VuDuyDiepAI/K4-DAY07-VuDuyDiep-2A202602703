@@ -1,0 +1,86 @@
+Similarity predictions (sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2)
+
+Pair 1: prediction=cao; observed=cao; score=0.5490
+  A: Làm thế nào để đăng ký thêm một học phần?
+  B: Tôi muốn bổ sung môn học vào kế hoạch học kỳ.
+Pair 2: prediction=thấp; observed=cao; score=0.4233
+  A: Điều kiện xét tốt nghiệp gồm những gì?
+  B: Quy trình phân công cán bộ coi thi ra sao?
+Pair 3: prediction=cao; observed=cao; score=0.2182
+  A: Cách tính điểm trung bình học kỳ như thế nào?
+  B: Công thức tính ĐTBHK là gì?
+Pair 4: prediction=thấp; observed=thấp; score=0.1355
+  A: Người học sử dụng hệ thống dạy học trực tuyến như thế nào?
+  B: Khi nào văn bằng hoặc chứng chỉ bị thu hồi?
+Pair 5: prediction=cao; observed=cao; score=0.7239
+  A: Giảng viên cần đáp ứng tiêu chuẩn nào để dạy môn học?
+  B: Yêu cầu đối với trợ giảng môn học là gì?
+
+Benchmark: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 + RecursiveChunker(chunk_size=500)
+Corpus documents: 8
+Stored chunks: 2763
+
+Query 1: Trường hợp nào khiến giảng viên bị đưa ra khỏi quy hoạch giảng dạy của một môn học?
+Audience: student
+Filter: {'audience': 'student'}
+Expected document: quy-che-dao-tao-chinh-quy
+Top-3 document IDs: ['quy-che-dao-tao-chinh-quy', 'quy-dinh-to-chuc-thi', 'quy-che-dao-tao-chinh-quy']
+Top-3 hit: YES
+Agent extractive answer contains gold answer: NO
+Agent answer preview: Sinh viên thuộc diện buộc thôi học nếu có nguyện vọng chuyển từ hình thức đào tạo chính quy sang hình thức đào tạo từ xa phải làm đơn để Hiệu trưởng xét cụ thể từng trường hợP.  [2] Điều  5.	Giáo trình cho mỗi học phần 5.1.	Mỗi học phần d
+  1. score=0.7258; doc_id=quy-che-dao-tao-chinh-quy; preview=Sinh viên thuộc diện buộc thôi học nếu có nguyện vọng chuyển từ hình thức đào tạo chính quy sang hình thức đào tạo từ xa phải làm đơn để Hiệu trưởng xét cụ thể từng trường hợP.
+  2. score=0.7150; doc_id=quy-dinh-to-chuc-thi; preview=Điều  5.	Giáo trình cho mỗi học phần 5.1.	Mỗi học phần dùng một giáo trình chính. Trong từng giai đoạn, giáo trình cho học phần có thể thay đổi do Hiệu trưởng ra quyết định. 5.2.	Ngoài một giáo trình chính, mỗi học phần được 
+  3. score=0.7073; doc_id=quy-che-dao-tao-chinh-quy; preview=-	Sinh viên đủ điều kiện làm khóa luận được khoa/bộ môn quản lý ngành đào tạo giao đề tài khóa luận tốt nghiệP. Căn cứ đề nghị của Trưởng khoa/Trưởng bộ môn quản lý ngành đào tạo và Trưởng P.ĐTĐH, Hiệu trưởng ra quyết định giao nhiệm vụ hướ
+
+Query 2: Bộ phận nào của Trường sẽ xem xét các trường hợp có lí do chính đáng để vắng thi giữa kỳ?
+Audience: student
+Filter: {}
+Expected document: quy-dinh-to-chuc-thi
+Top-3 document IDs: ['quy-che-dao-tao-chinh-quy', 'quy-che-van-bang-chung-chi', 'quy-dinh-to-chuc-thi']
+Top-3 hit: YES
+Agent extractive answer contains gold answer: YES
+Agent answer preview: Trong trường hợp sinh viên có lý do chính đáng (ốm đau, tai nạn, việc gia đình đột xuất,…) không thể tham dự thi giữa kỳ thì làm đơn trình bày cùng các minh chứng, P.ĐTĐH xem xét và nếu hợp lệ sinh viên được phép dùng điểm cuối kỳ thay cho 
+  1. score=0.7894; doc_id=quy-che-dao-tao-chinh-quy; preview=Trong trường hợp sinh viên có lý do chính đáng (ốm đau, tai nạn, việc gia đình đột xuất,…) không thể tham dự thi giữa kỳ thì làm đơn trình bày cùng các minh chứng, P.ĐTĐH xem xét và nếu hợp lệ sinh viên được phép dùng điểm cuối kỳ thay cho 
+  2. score=0.7894; doc_id=quy-che-van-bang-chung-chi; preview=Trong trường hợp sinh viên có lý do chính đáng (ốm đau, tai nạn, việc gia đình đột xuất,…) không thể tham dự thi giữa kỳ thì làm đơn trình bày cùng các minh chứng, P.ĐTĐH xem xét và nếu hợp lệ sinh viên được phép dùng điểm cuối kỳ thay cho 
+  3. score=0.7894; doc_id=quy-dinh-to-chuc-thi; preview=Trong trường hợp sinh viên có lý do chính đáng (ốm đau, tai nạn, việc gia đình đột xuất,…) không thể tham dự thi giữa kỳ thì làm đơn trình bày cùng các minh chứng, P.ĐTĐH xem xét và nếu hợp lệ sinh viên được phép dùng điểm cuối kỳ thay cho 
+
+Query 3: Thời hạn lưu trữ đề thi các môn học hệ đại học chính quy của Trường là bao lâu?
+Audience: student
+Filter: {}
+Expected document: quy-dinh-khoa-luan-tot-nghiep
+Top-3 document IDs: ['quy-dinh-khoa-luan-tot-nghiep', 'quy-dinh-tieu-chuan-giang-vien', 'quy-dinh-to-chuc-thi']
+Top-3 hit: YES
+Agent extractive answer contains gold answer: YES
+Agent answer preview: Loại hồ sơ: Phân công cán bộ ra đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại học. Thời hạn lưu trữ: 9 năm. Loại hồ sơ: Phân công cán bộ nhận đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại họ
+  1. score=0.8240; doc_id=quy-dinh-khoa-luan-tot-nghiep; preview=Loại hồ sơ: Phân công cán bộ ra đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại học. Thời hạn lưu trữ: 9 năm. Loại hồ sơ: Phân công cán bộ nhận đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại họ
+  2. score=0.8240; doc_id=quy-dinh-tieu-chuan-giang-vien; preview=Loại hồ sơ: Phân công cán bộ ra đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại học. Thời hạn lưu trữ: 9 năm. Loại hồ sơ: Phân công cán bộ nhận đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại họ
+  3. score=0.8240; doc_id=quy-dinh-to-chuc-thi; preview=Loại hồ sơ: Phân công cán bộ ra đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại học. Thời hạn lưu trữ: 9 năm. Loại hồ sơ: Phân công cán bộ nhận đề thi. Hình thức lưu trữ: bản giấy. Đơn vị lưu trữ: Phòng Đào tạo Đại họ
+
+Query 4: Sinh viên thuộc chương trình tài năng có các hình thức nào?
+Audience: staff
+Filter: {}
+Expected document: quy-trinh-phan-cong-can-bo-coi-thi
+Top-3 document IDs: ['quy-che-dao-tao-chinh-quy', 'quy-che-van-bang-chung-chi', 'quy-dinh-cong-tac-giao-trinh']
+Top-3 hit: NO
+Agent extractive answer contains gold answer: NO
+Agent answer preview: -	Học phần tài năng: là các học phần được tổ chức nhằm tăng cường tương tác giữa giảng viên và sinh viên, khuyến khích tư duy phản biện, khả năng sáng tạo, khả năng phát triển và trình bày ý tưởng của sinh viên. -	Học phần tiên tiến: là các
+  1. score=0.7893; doc_id=quy-che-dao-tao-chinh-quy; preview=-	Học phần tài năng: là các học phần được tổ chức nhằm tăng cường tương tác giữa giảng viên và sinh viên, khuyến khích tư duy phản biện, khả năng sáng tạo, khả năng phát triển và trình bày ý tưởng của sinh viên. -	Học phần tiên tiến: là các
+  2. score=0.7893; doc_id=quy-che-van-bang-chung-chi; preview=-	Học phần tài năng: là các học phần được tổ chức nhằm tăng cường tương tác giữa giảng viên và sinh viên, khuyến khích tư duy phản biện, khả năng sáng tạo, khả năng phát triển và trình bày ý tưởng của sinh viên. -	Học phần tiên tiến: là các
+  3. score=0.7893; doc_id=quy-dinh-cong-tac-giao-trinh; preview=-	Học phần tài năng: là các học phần được tổ chức nhằm tăng cường tương tác giữa giảng viên và sinh viên, khuyến khích tư duy phản biện, khả năng sáng tạo, khả năng phát triển và trình bày ý tưởng của sinh viên. -	Học phần tiên tiến: là các
+
+Query 5: Trong các thành phần điểm của điểm môn học thì điểm giữa kỳ có tên gọi khác là gì?
+Audience: student
+Filter: {}
+Expected document: quy-dinh-khoa-luan-tot-nghiep
+Top-3 document IDs: ['quy-che-dao-tao-chinh-quy', 'quy-dinh-tieu-chuan-giang-vien', 'quy-dinh-to-chuc-thi']
+Top-3 hit: NO
+Agent extractive answer contains gold answer: NO
+Agent answer preview: - Tất cả các bảng điểm phải có có đầy đủ chữ ký, họ tên của cán bộ chấm thi và xác nhận của Trưởng/Phó đơn vị quản lý môn học. Ghi chú: Việc nhập điểm khóa luận tốt nghiệp thực hiện theo qui trình riêng. 4.	Cán bộ chấm thi có trách nhiệm ch
+  1. score=0.6374; doc_id=quy-che-dao-tao-chinh-quy; preview=- Tất cả các bảng điểm phải có có đầy đủ chữ ký, họ tên của cán bộ chấm thi và xác nhận của Trưởng/Phó đơn vị quản lý môn học. Ghi chú: Việc nhập điểm khóa luận tốt nghiệp thực hiện theo qui trình riêng. 4.	Cán bộ chấm thi có trách nhiệm ch
+  2. score=0.6374; doc_id=quy-dinh-tieu-chuan-giang-vien; preview=- Tất cả các bảng điểm phải có có đầy đủ chữ ký, họ tên của cán bộ chấm thi và xác nhận của Trưởng/Phó đơn vị quản lý môn học. Ghi chú: Việc nhập điểm khóa luận tốt nghiệp thực hiện theo qui trình riêng. 4.	Cán bộ chấm thi có trách nhiệm ch
+  3. score=0.6374; doc_id=quy-dinh-to-chuc-thi; preview=- Tất cả các bảng điểm phải có có đầy đủ chữ ký, họ tên của cán bộ chấm thi và xác nhận của Trưởng/Phó đơn vị quản lý môn học. Ghi chú: Việc nhập điểm khóa luận tốt nghiệp thực hiện theo qui trình riêng. 4.	Cán bộ chấm thi có trách nhiệm ch
+
+Tổng kết benchmark
+- Top-3 có đúng tài liệu nguồn: 3 / 5
+- Câu trả lời chứa đáp án vàng: 2 / 5
+- Đúng cả truy xuất và đáp án: 2 / 5
