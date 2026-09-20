@@ -32,7 +32,7 @@ from src import (
 
 CORPUS_DIR = Path("data/university")
 OUTPUT_PATH = Path("ket_qua_benchmark.txt")
-SKIP_FILES = {"BENCHMARK.md", "MANIFEST.md"}
+SKIP_FILES = {"BENCHMARK.md", "MANIFEST.md", "README.md"}
 SIMILARITY_PAIRS = [
     (
         "Làm thế nào để đăng ký thêm một học phần?",
@@ -65,19 +65,29 @@ SIMILARITY_PAIRS = [
 def parse_frontmatter(path: Path) -> tuple[dict[str, str], str]:
     """Return simple YAML front matter and cleaned body for one Markdown file."""
     raw = path.read_text(encoding="utf-8")
+    if not raw.lstrip().startswith("---") or raw.count("---") < 2:
+        raise ValueError(f"Missing YAML front matter: {path}")
     _, frontmatter, body = raw.split("---", 2)
     metadata = dict(re.findall(r"^(\w+):\s*\"?(.+?)\"?\s*$", frontmatter, re.M))
     return metadata, body.strip()
 
 
-def load_chunked_documents(chunker) -> list[Document]:
+def load_chunked_documents(
+    chunker, allowed_doc_ids: set[str] | None = None
+) -> list[Document]:
     """Load each corpus document and create one Document per retrieval chunk."""
     chunked_documents: list[Document] = []
 
     for path in sorted(CORPUS_DIR.glob("*.md")):
         if path.name in SKIP_FILES:
             continue
-        metadata, body = parse_frontmatter(path)
+        try:
+            metadata, body = parse_frontmatter(path)
+        except ValueError as error:
+            print(f"Skipping {path.name}: {error}")
+            continue
+        if allowed_doc_ids is not None and metadata.get("doc_id") not in allowed_doc_ids:
+            continue
         doc_id = metadata["doc_id"]
         for index, chunk in enumerate(chunker.chunk(body), start=1):
             chunked_documents.append(
@@ -116,13 +126,15 @@ def extractive_llm(prompt: str) -> str:
     return context.removeprefix("[1] ").strip()
 
 
-def build_embedder(provider_override: str | None = None):
+def build_embedder(
+    provider_override: str | None = None, local_model: str | None = None
+):
     """Select the optional Gemini backend, or the default mock backend."""
     provider = (provider_override or os.getenv(EMBEDDING_PROVIDER_ENV, "mock")).strip().lower()
     if provider == "gemini":
         return provider, GeminiEmbedder()
     if provider == "local":
-        return provider, LocalEmbedder()
+        return provider, LocalEmbedder(model_name=local_model) if local_model else LocalEmbedder()
     if provider in {"", "mock"}:
         return "mock", MockEmbedder()
     raise ValueError(
@@ -158,6 +170,14 @@ def main() -> None:
     parser.add_argument("--chunk-size", type=int, default=500)
     parser.add_argument("--overlap", type=int, default=50)
     parser.add_argument("--sentences-per-chunk", type=int, default=3)
+    parser.add_argument(
+        "--doc-ids",
+        help="Comma-separated doc_id values to index; defaults to the full corpus.",
+    )
+    parser.add_argument(
+        "--local-model",
+        help="Hugging Face model ID used only with --provider local.",
+    )
     args = parser.parse_args()
     # A benchmark run should use the key currently saved in .env.  This avoids
     # accidentally retaining an older GEMINI_API_KEY from a PowerShell session.
@@ -175,8 +195,15 @@ def main() -> None:
         strategy_label = (
             f"SentenceChunker(max_sentences_per_chunk={args.sentences_per_chunk})"
         )
-    documents = load_chunked_documents(chunker)
-    provider, embedder = build_embedder(args.provider)
+    allowed_doc_ids = (
+        {doc_id.strip() for doc_id in args.doc_ids.split(",") if doc_id.strip()}
+        if args.doc_ids
+        else None
+    )
+    documents = load_chunked_documents(chunker, allowed_doc_ids)
+    if not documents:
+        raise ValueError("No documents were loaded; check --doc-ids against front-matter doc_id.")
+    provider, embedder = build_embedder(args.provider, args.local_model)
     store = EmbeddingStore(f"university-benchmark-{provider}", embedding_fn=embedder)
     store.add_documents(documents)
     agent = KnowledgeBaseAgent(store=store, llm_fn=extractive_llm)

@@ -9,6 +9,7 @@ source_url: https://github.com/DoPhamPhucTinh/R2GQA
 retrieved_at: 2026-09-19
 document_version: "not-stated"
 license_or_permission: "research-use-only; see source repository"
+data_origin: compact-30-percent
 ---
 
 # Về việc ban hành Quy trình phân công cán bộ coi thi cho các đợt thi tập trung hệ đại học chính quy
@@ -64,35 +65,8 @@ Cán bộ coi thi có trách nhiệm thực hiện công tác coi thi theo đún
 
 3. Quy trình tổng kết coi thi
 Bước 1: Khóa Hệ thống
-Phòng Đào tạo Đại học khóa toàn bộ chức năng thay đổi phân công cán bộ coi thi trên Hệ thống. Thời gian hoàn thành là 1 ngày sau ngày thi cuối cùng của đợt thi.
-Bước 2: Xác nhận việc thực hiện coi thi 
-Các đơn vị tổ chức thi xác nhận cán bộ coi thi thực tế cho các ca thi do đơn vị phụ trách và gửi báo cáo tình hình coi thi cho Ban Giám hiệu thông qua Phòng Đào tạo Đại học nếu có cán bộ coi thi vi phạm quy định về coi thi. Thời gian hoàn thành là 1 ngày sau ngày thi cuối cùng của đợt thi.
-Bước 3: Tổng kết coi thi
-Trường xem xét xử lý kỷ luật cán bộ coi thi vi phạm quy định về coi thi (nếu có). Phòng Đào tạo Đại học làm đề xuất, Phòng Kế hoạch Tài chính làm thủ tục chi trả thù lao coi thi cho cán bộ coi thi theo quy định. Thời gian hoàn thành là 10 ngày sau ngày thi cuối cùng của đợt thi.
 
-## Mục đích và phạm vi áp dụng
-
-I. MỤC ĐÍCH
-Quy trình này nhằm quy định chi tiết cách thực hiện công tác phân công cán bộ coi thi đối với các đợt thi tập trung (giữa kỳ, cuối kỳ) hệ đại học chính quy tại Trường Đại học Công nghệ Thông tin, đảm bảo sự phối hợp đồng bộ, kịp thời, chính xác giữa các đơn vị, cá nhân có liên quan.
-II. PHẠM VI ÁP DỤNG
-Quy trình này áp dụng đối với cán bộ và sinh viên có liên quan của Trường Đại học Công nghệ Thông tin.
-
-## Giải thích từ ngữ
-
-III. GIẢI THÍCH TỪ NGỮ
-- Trường: Trường Đại học Công nghệ Thông tin;
-- P.ĐTĐH: Phòng Đào tạo Đại học; 
-- P.KHTC: Phòng Kế hoạch Tài chính; 
-- P.DL&CNTT: Phòng Dữ liệu & Công nghệ Thông tin; 
-- CBCT: Cán bộ coi thi;
-- Cán bộ giảng dạy: Những người có tham gia giảng dạy lý thuyết, trợ giảng thực hành, trợ giảng lý thuyết;
-- GV: Viên chức/người lao động là giảng viên của Trường;
-- CV: Viên chức/người lao động là chuyên viên của Trường;
-- NCV: Viên chức/người lao động là nghiên cứu viên của Trường;
-- SV: Sinh viên;
-- Đơn vị tổ chức thi: Khoa, bộ môn, trung tâm và các đơn vị có trách nhiệm tổ chức thi cho môn học mà đơn vị quản lý;
-- Cán bộ: bao gồm giảng viên, chuyên viên, nghiên cứu viên, giảng viên thỉnh giảng của Trường.
-- Hệ thống/Cổng thông tin đào tạo đại học/Phần mềm QLĐT: Hệ thống phần mềm quản lý đào tạo của Trường (https://daa.uit.edu.vn).
+## Trích đoạn benchmark
 
 ## Điều 2. Giải thích từ ngữ
 
@@ -137,35 +111,4 @@ CTTT Gồm 8 môn học:
 8. Tiếng Anh chuyên ngành công nghệ thông tin (mã môn SPCH3723)
 2.        Ngoài các môn học tiếng Anh tại Khoản 1 của Điều 3, nếu sinh viên có nguyện vọng thì có thể đăng ký học môn Kỹ năng thuyết trình tiếng Anh (mã môn: ENG06), Kỹ năng viết tiếng Anh (mã môn: ENG007) để tích lũy thêm số tín chỉ ngoài số tín chỉ tối thiểu cần đạt theo chương trình đào tạo (các môn học này không dùng để thay thế cho những môn học thuộc khối kiến thức chuyên ngành).
 3.        Đồng thời, trong CTĐT của ngành học có thể có những môn học chuyên ngành được giảng dạy bằng ngoại ngữ nhằm cung cấp kiến thức ngoại ngữ chuyên ngành và tạo môi trường cho sinh viên thực hành các kỹ năng ngoại ngữ, gọi tắt là môn học Ngoại ngữ chuyên môn (NNCM). Những môn học đó được thiết kế và tổ chức giảng dạy tuân thủ theo các quy định tại Chương III của Quy định này.
-4.        Những loại chương trình không được liệt kê tại Bảng 1 thì thực hiện theo bản mô tả chương trình đào tạo và quy định riêng của loại chương trình đó (nếu có).
-
-## Điều 5. Giáo trình cho mỗi học phần
-
-Điều  5.	Giáo trình cho mỗi học phần
-5.1.	Mỗi học phần dùng một giáo trình chính. Trong từng giai đoạn, giáo trình cho học phần có thể thay đổi do Hiệu trưởng ra quyết định.
-5.2.	Ngoài một giáo trình chính, mỗi học phần được trường tổ chức biên soạn tối đa hai sách chuyên khảo, ba tài liệu tham khảo, một tài liệu hướng dẫn.
-5.3.	Các giáo trình sử dụng trong giảng dạy phải được ghi rõ trong đề cương học phần đã được Hiệu trưởng phê duyệt.
-
-## Điều 12. Trách nhiệm của cán bộ coi thi
-
-Điều  12. Trách nhiệm của cán bộ coi thi
-1. CBCT phải có mặt tại địa điểm tập trung của đơn vị tổ chức thi ít nhất 15 phút trước giờ bắt đầu thi để nhận danh sách thi, giấy thi, giấy nháp, túi đề thi (yêu cầu kiểm tra kỹ niêm phong túi đề) và nghe phổ biến các quy định cần thiết (trong trường hợp cần thiết).
-2. Trước giờ thi 10 phút, tại phòng thi, các CBCT phải hoàn tất đánh số chỗ ngồi theo danh sách (dùng số thứ tự SV trong danh sách để đánh số) – tuyệt đối không để SV tự sắp chỗ trong phòng thi. Trong thời gian coi thi, CBCT kiểm tra giấy tờ chứng minh cá nhân hợp lệ, đối chiếu hình, đối chiếu tên với danh sách dự thi. CBCT không được cho vào phòng thi các SV không có tên trong danh sách và cũng không có giấy vào phòng thi được cấp bởi P.ĐTĐH. Nếu SV có khiếu nại, CBCT hướng dẫn SV tới ngay P.ĐTĐH để xác minh giải quyết. CBCT lưu ý thu lại giấy vào phòng thi của SV để bàn giao cùng túi bài thi.
-3. CBCT phổ biến quy chế, quy định, trách nhiệm của sinh viên dự thi (Điều 13 Quy định này); giấy thi và giấy nháp của SV phải có đầy đủ chữ ký, ghi rõ họ tên của tất cả CBCT; hướng dẫn và kiểm tra SV gấp giấy thi đúng quy cách, ghi số thứ tự và điền đủ vào các mục cần thiết của giấy thi trước khi làm bài; ghi thông tin tên môn thi, thời gian thi và biểu đồ thời gian lên bảng.
-4. Khi bắt đầu giờ mở đề, 1 CBCT giơ cao phong bì đề thi để SV thấy rõ cả mặt trước và mặt sau còn nguyên nhãn niêm phong, mời 1 đại diện SV ký tên xác nhận tình trạng niêm phong lên nhãn của túi đề thi; bóc phong bì đựng đề thi và phát đề thi cho từng SV (trước khi phát đề thi cần kiểm tra số lượng đề thi, nếu thiếu hoặc lẫn đề khác, cần báo ngay cho cán bộ trực thi của đơn vị tổ chức thi xử lý). Khi sinh viên cuối cùng nhận được đề thi, CBCT cho phép sinh viên lật đề thi lên và yêu cầu sinh viên kiểm tra tình trạng đề thi trước khi làm bài. Nếu có bất kỳ vấn đề gì về đề thi, CBCT cần báo ngay cho cán bộ trực thi của đơn vị tổ chức thi xử lý. CBCT phải phát đề thi đúng giờ qui định bắt đầu ca thi. 
-5. Trong giờ làm bài, phải luôn có CBCT bao quát từ đầu phòng đến cuối phòng và CBCT bao quát từ cuối phòng đến đầu phòng cho đến hết giờ thi. CBCT không đứng gần SV khi họ làm bài. Khi SV hỏi điều gì, CBCT chỉ được trả lời công khai trong phạm vi quy định.
-6. CBCT không được giúp đỡ SV làm bài thi dưới bất kỳ hình thức nào; không được làm việc riêng, không được hút thuốc, uống bia, rượu, phải có mặt đúng giờ và thường xuyên tại phòng thi để làm các nhiệm vụ. Các CBCT phải bảo vệ đề thi trong khi thi, không để lọt đề thi ra ngoài phòng thi. Các CBCT và những người làm nhiệm vụ phục vụ thi không được thảo luận, sao chép, giải đề, mang đề ra ngoài hoặc giải thích đề thi cho SV.
-7. Nếu có SV vi phạm quy định thi thì CBCT phải lập biên bản xử lý (Mẫu THI-M06). Nếu có tình huống bất thường phải báo cáo ngay cho Trưởng đơn vị tổ chức thi giải quyết;
-8. Trước khi hết giờ làm bài 15 phút CBCT thông báo thời gian còn lại cho SV biết;
-9. Khi hết giờ làm bài, CBCT yêu cầu SV ngừng làm bài và thu bài của tất cả SV, kể cả SV đã bị xử lý vi phạm. Một CBCT duy trì trật tự và kỷ luật phòng thi. Một CBCT vừa gọi tên từng SV lên nộp bài, vừa nhận bài thi của SV. Khi nhận bài phải đếm đủ số tờ giấy thi của SV đã nộp, yêu cầu SV tự ghi đúng số tờ và ký tên vào danh sách. CBCT tuyệt đối không tự ý thêm tên và cho SV ký thêm vào danh sách thi.
-10. Các CBCT kiểm tra sắp xếp bài thi theo thứ tự SV trong danh sách. Các biên bản xử lý vi phạm (nếu có) phải kèm theo bài thi của SV. Một CBCT mang túi bài thi đến bàn giao bài thi cho cán bộ trực thi của đơn vị tổ chức thi ngay sau mỗi buổi thi. Mỗi túi bài thi phải được kiểm tra công khai và đối chiếu số bài và số tờ của từng bài kèm theo biên bản theo dõi SV và các biên bản xử lý vi phạm cùng tang vật (nếu có);
-11. Sau khi bàn giao xong bài thi, từng túi đựng bài thi được cán bộ trực thi niêm phong và ký niêm phong. Cán bộ trực thi và 01 CBCT ghi rõ họ tên và ký vào biên bản bàn giao. Tuyệt đối không được để nhầm lẫn hoặc mất bài thi.
-12. Đối với môn thi trắc nghiệm, ngoài trách nhiệm được quy định tại Khoản 1 Điều này, CBCT phải thực hiện các công việc sau:
-a) Nhận phiếu trả lời trắc nghiệm (TLTN), kí tên vào phiếu TLTN.
-b) Phát phiếu TLTN và hướng dẫn SV điền vào phiếu TLTN.
-c) Phát đề thi cho SV sao cho 2 SV ngồi cạnh nhau (theo cả hàng ngang và hàng dọc) không có cùng mã đề thi. 
-d) Kiểm tra việc ghi và tô mã đề thi vào phiếu TLTN của SV (so sánh mã đề thi đã ghi, tô trên phiếu TLTN và ghi trên phiếu thu bài thi với mã đề thi ghi trên tờ đề thi của SV).
-e) Bàn giao cho cán bộ trực thi túi phiếu TLTN và các phiếu TLTN chưa sử dụng.
-13. Đối với môn thi trên máy tính tại phòng máy, ngoài trách nhiệm được quy định tại Khoản 1 Điều này, CBCT phải thực hiện các công việc sau:
-a) Đảm bảo khoảng cách hợp lý giữa 02 SV.
-b) Kiểm tra việc máy tính có được truy cập internet hoặc mạng cục bộ theo quy định ghi trên đề thi.
+4.        Những loại chương trình không được liệt kê tại Bảng 1 thì thực hiện theo bản mô tả chương trìn
